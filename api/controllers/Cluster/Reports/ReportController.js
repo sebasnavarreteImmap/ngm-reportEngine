@@ -23,7 +23,7 @@ module.exports = {
 		// activity
 		if ( req.param( 'report_type' ) === 'activity' ) {
 
-			var fields = [
+			var fields = [ 
 						'project_id',
 						'report_id',
 						'cluster',
@@ -571,21 +571,28 @@ module.exports = {
 							.find( { location_id: location_ids } )
 							.populateAll()
 							.exec( function( err, beneficiaries ){
-								if (err) return res.negotiate( err );
+								if (err) return res.negotiate( err ); 
 								Trainings
 										.find( { location_id: location_ids } )
 										.exec( function( err, trainings ){
 											if (err) return res.negotiate( err );
+
+											$report.locations.forEach(function (location, index, array) {
+                                       queryAsync.bind(null, beneficiaries, trainings, location, index)
+                                            });
+                                       return res.json(200,$report);
+
+
 											// parallelize locations processing
-											async.eachOfLimit(	$report.locations, 
+											/*async.eachOfLimit(	$report.locations, 
 															 	500, // max locations in parallel
 															 	queryAsync.bind(null, beneficiaries, trainings),
 																function(err){
 																	if (err) return res.negotiate( err );
 																	return res.json( 200, $report );
 																}
-															 );
-										});
+															 );*/
+										}); 
 							});
 						
 						// to run for each location
