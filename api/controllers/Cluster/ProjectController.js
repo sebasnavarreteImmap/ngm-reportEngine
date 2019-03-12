@@ -214,6 +214,7 @@ module.exports = {
             setKey( project, 'strategic_objectives', 'strategic_objectives_list', ['objective_type_name', 'objective_type_description'] );
             setKey( project, 'beneficiary_type', 'beneficiary_type_list', ['beneficiary_type_name'] );
             setKey( project, 'project_donor', 'project_donor_list', ['project_donor_name'] );
+            setKey( project, 'project_implementing_partners','project_donor_list',['project_donor_name']); //cambiar listados de donors a implementingpartners
             setKey( project, 'activity_type', 'activity_type_list', ['cluster', 'activity_type_name']  );
             setKey( project, 'inter_cluster_activities', 'inter_cluster_activities_list', ['cluster']  );
             setKey( project, 'activity_type', 'activity_type_list', ['cluster', 'activity_type_name']  );
