@@ -161,6 +161,10 @@ module.exports = {
 		project_donor: {
 			type: 'array'
 		},
+		project_implementing_partners:{ // implementing partners
+			type: 'array'
+
+		},
 		activity_type: {
 			type: 'array',
 			required: true
