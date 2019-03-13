@@ -57,8 +57,6 @@ module.exports = {
 						'families',
 						'boys',
 						'girls',
-						'womenscerofive',
-
 						'men',
 						'women',
 						'elderly_men',
@@ -101,7 +99,6 @@ module.exports = {
 						'Families',
 						'Boys',
 						'Girls',
-						"Womenscerofive",
 						'Men',
 						'Women',
 						'Elderly Men',
@@ -125,7 +122,6 @@ module.exports = {
 						response[i].report_month = moment( response[i].reporting_period ).format( 'MMMM' );
 						response[i].total = response[i].boys +
 																response[i].girls +
-																response[i].womenscerofive+
 																response[i].men +
 																response[i].women +
 																response[i].elderly_men +
