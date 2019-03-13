@@ -165,6 +165,7 @@ module.exports = {
 			type: 'array'
 
 		},
+		
 		activity_type: {
 			type: 'array',
 			required: true

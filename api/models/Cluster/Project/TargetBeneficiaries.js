@@ -285,6 +285,10 @@ module.exports = {
 			type: 'integer',
 			defaultsTo: 0
 		},
+		womens05:{
+			type:'integer',
+			defaultsTo:0
+		},
 		elderly_men:{
 			type: 'integer',
 			defaultsTo: 0
