@@ -70,10 +70,6 @@ module.exports = {
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenscerofive:{
-			type: 'integer',
-			defaultsTo: 0
-		},
 		men:{
 			type: 'integer',
 			defaultsTo: 0
