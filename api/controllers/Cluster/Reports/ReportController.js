@@ -101,7 +101,7 @@ module.exports = {
 						'Families',
 						'Boys',
 						'Girls',
-						"Womens 0-5",
+						"Womenscerofive",
 						'Men',
 						'Women',
 						'Elderly Men',
