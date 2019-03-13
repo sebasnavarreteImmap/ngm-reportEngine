@@ -25,6 +25,10 @@ module.exports = {
 			type: 'integer',
 			defaultsTo: 0
 		},
+		womens05:{
+			type: 'integer',
+			defaultsTo:0
+		},
 		men:{
 			type: 'integer',
 			defaultsTo: 0
