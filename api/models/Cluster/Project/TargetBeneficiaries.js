@@ -285,7 +285,7 @@ module.exports = {
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womens05:{
+		womenscerofive:{
 			type:'integer',
 			defaultsTo:0
 		},
