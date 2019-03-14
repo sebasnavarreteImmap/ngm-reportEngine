@@ -567,7 +567,7 @@ module.exports = {
 						var location_ids = _.chain($report.locations).pluck('id').uniq().value();
 
 						// get beneficiaries, trainings rows
-						Beneficiares = []; 
+						Beneficiaries = []; 
 						/*Beneficiaries
 							.find( { location_id: location_ids } )
 							.populateAll()
@@ -593,7 +593,7 @@ module.exports = {
 																	return res.json( 200, $report );
 																}
 															 );*/
-									/*	}); 
+									/*}); 
 							});*/
 						
 						// to run for each location
