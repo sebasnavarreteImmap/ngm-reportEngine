@@ -6,7 +6,7 @@
  */
 
 var async = require('async');
-
+ 
 module.exports = {
 
 	// request as csv
@@ -567,7 +567,8 @@ module.exports = {
 						var location_ids = _.chain($report.locations).pluck('id').uniq().value();
 
 						// get beneficiaries, trainings rows
-						Beneficiaries
+						Beneficiares = [];
+						/*Beneficiaries
 							.find( { location_id: location_ids } )
 							.populateAll()
 							.exec( function( err, beneficiaries ){
@@ -592,8 +593,8 @@ module.exports = {
 																	return res.json( 200, $report );
 																}
 															 );*/
-										}); 
-							});
+									/*	}); 
+							});*/
 						
 						// to run for each location
 						var queryAsync = function(beneficiaries, trainings, location, i, callback){
