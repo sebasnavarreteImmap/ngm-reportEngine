@@ -277,43 +277,43 @@ module.exports = {
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenscerofive:{
+		womens_cero_five:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenssixeleven:{
+		womens_six_eleven:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenstwelveseventeen:{
+		womens_twelve_seventeen:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenseighteenfiftynine:{
+		womens_eighteen_fiftynine:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		womenssixtyandmore:{
+		womens_sixty_and_more:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		menscerofive:{
+		mens_cero_five:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		menssixeleven:{
+		mens_six_eleven:{
 			type: 'integer',
 			defaultsTo: 0
 		},
-		menstwelveseventeen:{
+		mens_twelve_seventeen:{
 			type:'integer',
 			defaultsTo:0
 		},
-		menseighteenfiftynine:{
+		mens_eighteen_fiftynine:{
 			type: 'integer',
 			defaultsTo:0
 		},
-		menssixtyandmore:{
+		mens_sixty_and_more:{
 			type: 'integer',
 			defaultsTo: 0
 		},
@@ -321,11 +321,15 @@ module.exports = {
 			type: 'integer',
 			defaultsTo:0
 		},
-		afrocol: {
+		afro_col: {
 			type:'integer',
 			defaultsTo:0
 		},
 		natives: {
+			type:'integer',
+			defaultsTo:0
+		},
+		people_black_communities:{
 			type:'integer',
 			defaultsTo:0
 		},
