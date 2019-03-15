@@ -340,7 +340,7 @@ module.exports = {
 		},
 		palenqueras:{
 			type:'integer',
-			defaultsTo:0
+			defaultsTo:0 
 		},
 		men:{
 			type: 'integer',

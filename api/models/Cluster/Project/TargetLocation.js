@@ -405,7 +405,7 @@ module.exports = {
 		},
 		men:{
 			type: 'integer',
-			defaultsTo: 0
+			defaultsTo: 0 
 		},
 		women:{
 			type: 'integer',
