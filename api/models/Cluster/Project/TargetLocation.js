@@ -309,6 +309,10 @@ module.exports = {
 			type:'integer',
 			defaultsTo:0
 		},
+		site_rom_gitanos:{
+			type:'integer',
+			defaultsTo:0
+		},
 		site_men:{
 			type: 'integer',
 			defaultsTo: 0,
@@ -400,6 +404,10 @@ module.exports = {
 			defaultsTo:0
 		},
 		palenqueras:{
+			type:'integer',
+			defaultsTo:0
+		},
+		rom_gitanos:{
 			type:'integer',
 			defaultsTo:0
 		},
