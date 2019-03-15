@@ -333,6 +333,11 @@ module.exports = {
 			type:'integer',
 			defaultsTo:0
 		},
+		
+		raizales:{
+			type:'integer',
+			defaultsTo:0
+		},
 		men:{
 			type: 'integer',
 			defaultsTo: 0
