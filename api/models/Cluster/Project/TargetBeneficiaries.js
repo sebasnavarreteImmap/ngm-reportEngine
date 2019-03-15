@@ -321,6 +321,10 @@ module.exports = {
 			type: 'integer',
 			defaultsTo:0
 		},
+		afrocol: {
+			type:'integer',
+			defaultsTo:0
+		},
 		men:{
 			type: 'integer',
 			defaultsTo: 0

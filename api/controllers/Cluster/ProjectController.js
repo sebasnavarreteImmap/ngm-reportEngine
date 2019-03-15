@@ -220,7 +220,7 @@ module.exports = {
             setKey( project, 'activity_type', 'activity_type_list', ['cluster', 'activity_type_name']  );
             setKey( project, 'target_beneficiaries', 'target_beneficiaries_list', ['beneficiary_type_name', 'activity_type_name', 'activity_description_name', 'delivery_type_name',
             'key:units', 'key:cash_amount', 'key:households', 'key:sessions', 'key:families', 'key:boys', 'key:girls','key:womenscerofive','key:womenssixeleven', 'key:womenstwelveseventeen', 
-            'key:womenseighteenfiftynine','key:womenssixtyandmore', 'key:menscerofive','key:menssixeleven','key:menstwelveseventeen','key:menseighteenfiftynine','key:menssixtyandmore','key:lgtbi','key:men', 'key:women', 'key:elderly_men', 'key:elderly_women', 'key:unit_type_id' ]  );
+            'key:womenseighteenfiftynine','key:womenssixtyandmore', 'key:menscerofive','key:menssixeleven','key:menstwelveseventeen','key:menseighteenfiftynine','key:menssixtyandmore','key:lgtbi','key:afrocol','key:men', 'key:women', 'key:elderly_men', 'key:elderly_women', 'key:unit_type_id' ]  );
             setKey( project, 'target_locations', 'target_locations_list', ['admin0name', 'admin1name','key:admin1pcode','admin2name','key:admin2pcode','site_name','key:admin2lng','key:admin2lat', 'key:conflict','key:name', 'email']  );
 
         };
