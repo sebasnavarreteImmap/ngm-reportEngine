@@ -313,6 +313,10 @@ module.exports = {
 			type: 'integer',
 			defaultsTo:0
 		},
+		menssixtyandmore:{
+			type: 'integer',
+			defaultsTo: 0
+		},
 		men:{
 			type: 'integer',
 			defaultsTo: 0
