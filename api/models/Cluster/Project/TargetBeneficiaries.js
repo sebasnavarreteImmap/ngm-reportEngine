@@ -259,7 +259,7 @@ module.exports = {
 			// conditional/unconditional
 		cash_amount: {
 			type: 'integer',
-			defaultsTo: 0
+			defaultsTo: 0 
 		},
 		households:{
 			type: 'integer',
@@ -304,6 +304,10 @@ module.exports = {
 		menssixeleven:{
 			type: 'integer',
 			defaultsTo: 0
+		},
+		menstwelveseventeen:{
+			type:'integer',
+			defaultsTo:0
 		},
 		men:{
 			type: 'integer',
