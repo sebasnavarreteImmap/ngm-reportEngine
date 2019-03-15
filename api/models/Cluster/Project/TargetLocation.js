@@ -305,6 +305,10 @@ module.exports = {
 			type:'integer',
 			defaultsTo:0
 		},
+		site_palenqueras:{
+			type:'integer',
+			defaultsTo:0
+		},
 		site_men:{
 			type: 'integer',
 			defaultsTo: 0,
@@ -392,6 +396,10 @@ module.exports = {
 			defaultsTo:0
 		},
 		raizales:{
+			type:'integer',
+			defaultsTo:0
+		},
+		palenqueras:{
 			type:'integer',
 			defaultsTo:0
 		},
