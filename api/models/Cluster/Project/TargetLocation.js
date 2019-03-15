@@ -277,6 +277,10 @@ module.exports = {
 			type:'integer',
 			defaultsTo:0
 		},
+		site_menseighteenfiftynine:{
+			type:'integer',
+			defaultsTo:0
+		},
 		site_men:{
 			type: 'integer',
 			defaultsTo: 0,
@@ -336,6 +340,10 @@ module.exports = {
 			defaultsTo: 0
 		},
 		menstwelveseventeen:{
+			type:'integer',
+			defaultsTo:0
+		},
+		menseighteenfiftynine:{
 			type:'integer',
 			defaultsTo:0
 		},
