@@ -193,6 +193,14 @@ module.exports = {
 			type: 'string'
 		},
 
+		// indicator that relates to activity for HRP reporting
+		indicator_id: {
+			type: 'string'
+		},
+		indicator_name: {
+			type: 'string'
+		},
+
 		// mpc delivery
 		mpc_delivery_type_id: {
 			type: 'string'
@@ -295,6 +303,22 @@ module.exports = {
     },
     injury_treatment_same_province:{
       type: 'boolean'
+    },
+
+		// store partial kits
+		partial_kits: {
+			type: 'array'
+
+		},
+
+		// store kit details
+		kit_details: {
+			type: 'array'
+
+		},
+
+    remarks:{
+      type: 'string'
     },
 
 		// target locations

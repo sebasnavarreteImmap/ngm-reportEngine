@@ -74,7 +74,27 @@ module.exports.routes = {
   'GET /export': 'ReportHub/FileController.export',
   'GET /getBeneficiairiesCsv': 'ReportHub/FileController.getBeneficiairiesCsv',
 
-  
+  // Documents
+  'GET /listProjectDocuments/:project_id': 'ReportHub/FileController.listProjectDocuments',
+  'GET /listReportDocuments/:report_id': 'ReportHub/FileController.listReportDocuments',
+  'GET /listDocuments': 'ReportHub/FileController.listDocuments',
+
+  'POST /uploadGDrive': 'ReportHub/FileController.uploadGDrive',
+  'POST /uploadLocal': 'ReportHub/FileController.uploadLocal',
+
+  'GET /getProjectDocuments/:project_id': 'ReportHub/FileController.getProjectDocuments',
+  'GET /getReportDocuments/:report_id': 'ReportHub/FileController.getReportDocuments',
+  'GET /getDocuments': 'ReportHub/FileController.getDocuments',
+
+
+  'DELETE /deleteGDriveFile/:fileid': 'ReportHub/FileController.deleteGDriveFile',
+  // 'DELETE /deleteGDriveFilePermanently/:fileid': 'ReportHub/FileController.deleteGDriveFilePermanently',
+
+  // for local files
+  'GET /getProjectDocument/:fileid': 'ReportHub/FileController.getLocalProjectDocument',
+  'DELETE /deleteLocalDocument/:fileid': 'ReportHub/FileController.deleteLocalDocument',
+
+
   // -------- iMMAP --------
   // -------- Products --------
   'GET /immap/products/getProductsData': 'iMMAP/Products/ProductsController.getProductsData',
@@ -117,6 +137,12 @@ module.exports.routes = {
   'POST /cluster/admin/indicator': 'Cluster/Dashboards/AdminDashboardController.getClusterAdminIndicator',
 
   // PROJECTS
+  
+  // sectors
+  'POST /cluster/project/getProjectSectors': 'Cluster/ProjectController.getProjectSectors',
+  'GET /cluster/project/getProjectSectors': 'Cluster/ProjectController.getProjectSectors',
+
+  // details
   'POST /cluster/project/getProjectsList': 'Cluster/ProjectController.getProjectsList',
   'POST /cluster/project/getProject': 'Cluster/ProjectController.getProjectById',
   'POST /cluster/project/getProjects': 'Cluster/ProjectController.getProjects',
