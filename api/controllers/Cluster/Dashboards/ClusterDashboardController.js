@@ -21,7 +21,7 @@ var ClusterDashboardController = {
 				array.push( json[ i ] );
 			}
 		}
-		return array;
+		return array; 
 	},
 	
 	// get params from req
@@ -222,13 +222,172 @@ var ClusterDashboardController = {
 							if (err) return res.serverError(err);
 							return res.json( 200, { 'value': results[0]?results[0].total:0 } );
 						});
+
+
 					});	
 				}
 				
 				break;
 
+				//activity type filter
+
+				case 'activitytypes':
+
+				if ( params.list ) {
+					Beneficiaries.native(function(err, collection) {
+						if (err) return res.serverError(err);
+					
+						collection.aggregate([
+							{ $match : filterObject },
+							{
+							$group: {
+								_id: {activity_type_id:'$activity_type_id', activity_type_name:'$activity_type_name'}
+							}
+							},
+						]).toArray(function (err, results) {
+							if (err) return res.serverError(err);
+							activitytypes=_.pluck(results,'_id')		
+							activitytypes.sort(function(a, b) {
+								return a.activity_type_id.localeCompare(b.activity_type_id);
+							});
+							activitytypes.unshift({
+											activity_type_id: 'all',
+											activity_type_name: 'ALL',
+										});
+							return res.json( 200, activitytypes );
+						});
+					});
+				}
+
+				break;
+
+				//donor project filter
+
+				case 'project_donor':
+
+				if ( params.list ) {
+					Beneficiaries.native(function(err, collection) {
+						if (err) return res.serverError(err);
+
+					
+						/*collection.aggregate([
+							{ $match : filterObject },
+							{
+							$group: {
+								_id: {activity_type_id:'$activity_type_id', activity_type_name:'$activity_type_name'}
+							}
+							},
+						]).toArray(function (err, results) {
+							if (err) return res.serverError(err);
+							activitytypes=_.pluck(results,'_id')		
+							activitytypes.sort(function(a, b) {
+								return a.activity_type_id.localeCompare(b.activity_type_id);
+							});
+							activitytypes.unshift({
+											activity_type_id: 'all',
+											activity_type_name: 'ALL',
+										});
+							return res.json( 200, activitytypes );
+						});*/
+
+
+
+			    	Beneficiaries
+					.find()
+					.where( filters.default )
+					.where( filters.adminRpcode )
+					.where( filters.admin0pcode )
+					.where( filters.admin1pcode )
+					.where( filters.admin2pcode )
+					.where( filters.cluster_id )
+					.where( filters.activity_type_id )
+					.where( filters.acbar_partners )
+					.where( filters.organization_tag )
+					.where( filters.beneficiaries )
+					.where( filters.date )
+					.exec( function( err, beneficiaries ){
+
+						// return error
+						if (err) return res.negotiate( err );
+
+						var donorsreturn = [];
+
+						beneficiaries.forEach(function(d,i){
+
+							d.project_donor.forEach(function(donor,i){
+
+								donorsreturn.push(donor);
+
+							});
+
+						} );
+						console.log(beneficiaries, "mis beneficairios");
+
+						console.log(donorsreturn, "donantes a devolver");
+
+						/*collection.aggregate([
+							{ $match : filterObject },
+							{
+							$group: {
+								_id: {project_donor_id:'$project_donor_id', project_donor_name:'$project_donor_name'}
+							}
+							},
+						]).toArray(function (err, results) {
+							if (err) return res.serverError(err);*/
+							/*console.log(donorsreturn, "donantes a devolver");
+							donorslist=_.pluck(donorsreturn,'project_donor_id')		
+							donorslist.sort(function(a, b) {
+								return a.project_donor_id.localeCompare(b.project_donor_id);
+							});
+							donorslist.unshift({
+											project_donor_id: 'all',
+											project_donor_id: 'ALL',
+										});
+							return res.json( 200, donorslist );
+							*/
+						});
+
+
+					});
+				}
+
+				break;
+				
+
 			// count
 			case 'projects':
+
+			    //list of projects
+			    /*if(params.list){
+
+			    	Beneficiaries
+					.find()
+					.where( filters.default )
+					.where( filters.adminRpcode )
+					.where( filters.admin0pcode )
+					.where( filters.admin1pcode )
+					.where( filters.admin2pcode )
+					.where( filters.cluster_id )
+					.where( filters.activity_type_id )
+					.where( filters.acbar_partners )
+					.where( filters.organization_tag )
+					.where( filters.beneficiaries )
+					.where( filters.date )
+					.exec( function( err, beneficiaries ){
+
+						// return error
+						if (err) return res.negotiate( err );
+
+						if(beneficiaries.implementing_partners){
+							console.log(beneficiaries.implementing_partners, "impl de cada benef");
+						}
+
+
+					});
+
+
+			    }else{*/
+
 				Beneficiaries.native(function(err, collection) {
 					if (err) return res.serverError(err);
 				
@@ -254,6 +413,7 @@ var ClusterDashboardController = {
 						return res.json( 200, { 'value': results[0]?results[0].total:0 } );
 					});
 				});	
+			    //}
 				
 				break;
 
