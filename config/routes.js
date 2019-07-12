@@ -159,6 +159,8 @@ module.exports.routes = {
   'GET /cluster/project/delete': 'Cluster/ProjectController.deleteProjectById',
   'POST /cluster/project/getFinancialDetails': 'Cluster/ProjectController.getFinancialDetails',
 
+   //details 4wplus
+   'GET /cluster/project/getProjectsList4wplus': 'Cluster/ProjectController.getProjectsList4wplus',
 
   // STOCK REPORTS
   'POST /cluster/stock/getReportsList': 'Cluster/Stocks/StockReportController.getReportsList',

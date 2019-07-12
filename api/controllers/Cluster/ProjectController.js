@@ -154,6 +154,21 @@ var ProjectController = {
 
   },
 
+  getProjectsList4wplus: function() {
+
+    // get project by organization_id & status
+    Project
+      .find( {'admin0pcode':'COL','project_status':'active'} )
+      .sort('updatedAt DESC')
+      .exec(function(err, projects){
+
+        
+        return  projects;
+
+      });
+
+  },
+
   // get distinct sectors 
   getProjectSectors: function( req, res ) {
     
